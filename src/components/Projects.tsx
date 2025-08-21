@@ -19,7 +19,7 @@ const Projects = () => {
       ],
       completionRate: '98%',
       deployUrl: 'https://convi-final.onrender.com',
-      githubUrl: 'https://github.com/username/convi',
+      githubUrl: 'https://github.com/cmhblue1225/convi',
       status: 'LIVE',
       color: 'from-blue-500 to-purple-600',
       icon: <Database className="w-8 h-8" />
@@ -40,7 +40,7 @@ const Projects = () => {
       ],
       completionRate: '100%',
       deployUrl: 'https://beamish-dragon-f15ff7.netlify.app',
-      githubUrl: 'https://github.com/username/newmind',
+      githubUrl: 'https://github.com/cmhblue1225/newmind1',
       status: 'LIVE',
       color: 'from-emerald-500 to-teal-600',
       icon: <Brain className="w-8 h-8" />
@@ -60,8 +60,8 @@ const Projects = () => {
         '다양한 게임 모드 (Solo/Dual/Multi)'
       ],
       completionRate: '100%',
-      deployUrl: 'https://sensor-game-hub.onrender.com',
-      githubUrl: 'https://github.com/username/sensorchatbot',
+      deployUrl: 'https://sensorchatbot.onrender.com',
+      githubUrl: 'https://github.com/cmhblue1225/sensorchatbot',
       status: 'LIVE',
       color: 'from-orange-500 to-red-600',
       icon: <Smartphone className="w-8 h-8" />
@@ -258,7 +258,7 @@ const Projects = () => {
               GitHub에서 더 많은 프로젝트와 코드를 확인하실 수 있습니다
             </p>
             <motion.a
-              href="https://github.com"
+              href="https://github.com/cmhblue1225"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
