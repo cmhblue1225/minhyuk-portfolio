@@ -44,6 +44,9 @@ const Skills = () => {
   }
 
   const categories = Object.keys(skillCategories) as Array<keyof typeof skillCategories>
+  
+  type SkillCategory = keyof typeof skillCategories
+  type Skill = typeof skillCategories[SkillCategory]['skills'][0]
 
   return (
     <section id="skills" className="py-20 bg-apple-gray-50 dark:bg-apple-gray-900">
@@ -101,7 +104,7 @@ const Skills = () => {
           className="max-w-4xl mx-auto"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {skillCategories[activeCategory].skills.map((skill, index) => (
+            {skillCategories[activeCategory as SkillCategory].skills.map((skill: Skill, index: number) => (
               <motion.div
                 key={skill.name}
                 initial={{ opacity: 0, y: 20 }}
