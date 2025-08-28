@@ -11,16 +11,16 @@ const Hero = () => {
   }
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-50 via-apple-blue-50 to-white dark:from-apple-gray-900 dark:via-apple-gray-800 dark:to-apple-gray-700">
       {/* 배경 그라데이션 */}
-      <div className="absolute inset-0 bg-gradient-to-br from-apple-blue/10 via-purple-500/5 to-pink-500/10 dark:from-apple-blue/20 dark:via-purple-500/10 dark:to-pink-500/20" />
+      <div className="absolute inset-0 bg-gradient-to-br from-apple-blue-100/30 via-blue-100/20 to-apple-blue-200/30 dark:from-apple-blue-900/30 dark:via-blue-900/20 dark:to-apple-blue-800/30" />
       
       {/* 플로팅 배경 요소들 */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(6)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-4 h-4 bg-apple-blue/20 dark:bg-apple-blue/30 rounded-full"
+            className="absolute w-4 h-4 bg-apple-blue-400/30 dark:bg-apple-blue-300/40 rounded-full animate-glow"
             animate={{
               y: [0, -20, 0],
               x: [0, Math.random() * 100 - 50, 0],
@@ -52,7 +52,7 @@ const Hero = () => {
               안녕하세요! 👋
             </h1>
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-              <span className="text-gradient-apple">조민혁</span>입니다
+              <span className="gradient-text-blue">조민혁</span>입니다
             </h2>
           </motion.div>
 
@@ -78,7 +78,7 @@ const Hero = () => {
                 wrapper="span"
                 speed={50}
                 repeat={Infinity}
-                className="text-gradient"
+                className="gradient-text-blue"
               />
             </div>
           </motion.div>
@@ -110,7 +110,7 @@ const Hero = () => {
               }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="apple-button bg-apple-blue text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg"
+              className="apple-button bg-apple-blue text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg border border-white/20 hover:bg-apple-blue-600 hover:border-white/30 transition-all duration-300"
             >
               프로젝트 보기
             </motion.a>
@@ -124,7 +124,7 @@ const Hero = () => {
               }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="apple-button border-2 border-apple-blue text-apple-blue dark:text-apple-blue px-8 py-4 rounded-full font-semibold text-lg hover:bg-apple-blue hover:text-white transition-colors duration-200"
+              className="apple-button border-2 border-apple-blue text-apple-blue-600 dark:text-apple-blue-400 px-8 py-4 rounded-full font-semibold text-lg hover:bg-apple-blue hover:text-white hover:border-apple-blue-600 bg-white/10 dark:bg-black/20 backdrop-blur-sm transition-all duration-300"
             >
               연락하기
             </motion.a>

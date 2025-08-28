@@ -8,6 +8,7 @@ import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import ParticleBackground from './components/ParticleBackground'
 
 function App() {
   const [darkMode, setDarkMode] = useState(false)
@@ -45,10 +46,13 @@ function App() {
   }
 
   return (
-    <div className={`min-h-screen bg-apple-light dark:bg-apple-dark transition-colors duration-500`}>
+    <div className={`min-h-screen bg-apple-light dark:bg-apple-dark transition-colors duration-500 relative`}>
+      {/* 파티클 배경 */}
+      <ParticleBackground />
+      
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       
-      <main>
+      <main className="relative z-10">
         <Hero />
         <About />
         <Skills />
@@ -58,9 +62,9 @@ function App() {
       
       <Footer />
       
-      {/* 스크롤 진행바 */}
+      {/* 스크롤 진행바 - 파란색 그라데이션 */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-apple-blue to-purple-500 origin-left z-50"
+        className="scroll-indicator"
         style={{ scaleX }}
       />
     </div>

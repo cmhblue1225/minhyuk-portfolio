@@ -203,39 +203,8 @@ const About = () => {
           </div>
         </motion.div>
 
-        {/* 하단 통계 */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8"
-        >
-          {[
-            { number: '3+', label: '완료 프로젝트', description: '실제 배포된 웹 서비스' },
-            { number: '10+', label: '기술 스택', description: '숙련된 기술들' },
-            { number: '100%', label: '완성도', description: '상용 수준의 품질' }
-          ].map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <div className="text-4xl md:text-5xl font-bold text-gradient-apple mb-2">
-                {stat.number}
-              </div>
-              <div className="text-lg font-semibold text-apple-dark dark:text-white mb-1">
-                {stat.label}
-              </div>
-              <div className="text-sm text-apple-gray-600 dark:text-apple-gray-300">
-                {stat.description}
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+        
+        
       </div>
     </section>
   )
